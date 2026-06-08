@@ -1,35 +1,102 @@
-const observerOptions = {
-  threshold: 0.12,
-};
+/* ── iOS viewport height fix ──────────────────────────── */
+function setVH() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
+setVH();
+window.addEventListener('resize', setVH, { passive: true });
 
-const fadeElements = document.querySelectorAll('.section-shell, .hero-content, .hero-image, .offering-card, .step-card, .visual-item, .sensory-card, .sensory-hero-image, .curation-image, .detail-image, .contact-copy, .contact-form');
+/* ── Page intro — dismiss after animation ─────────────── */
+const pageIntro = document.getElementById('page-intro');
+if (pageIntro) {
+  setTimeout(() => {
+    pageIntro.classList.add('intro-done');
+    setTimeout(() => { pageIntro.style.display = 'none'; }, 700);
+  }, 2700);
+}
 
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+/* ── Hamburger / mobile nav ───────────────────────────── */
+const hamburger  = document.getElementById('hamburger');
+const mobileNav  = document.getElementById('mobile-nav');
+const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-cta');
+
+function openNav() {
+  hamburger.classList.add('is-open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  mobileNav.classList.add('is-open');
+  mobileNav.setAttribute('aria-hidden', 'false');
+  header.classList.add('nav-is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+  hamburger.classList.remove('is-open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileNav.classList.remove('is-open');
+  mobileNav.setAttribute('aria-hidden', 'true');
+  header.classList.remove('nav-is-open');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () =>
+  mobileNav.classList.contains('is-open') ? closeNav() : openNav()
+);
+
+mobileLinks.forEach(l => l.addEventListener('click', closeNav));
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) closeNav();
+});
+
+/* ── Header: opaque on scroll ─────────────────────────── */
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── Scroll-reveal — standard fade ───────────────────── */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-visible');
-      fadeObserver.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, { threshold: 0.1 });
 
-fadeElements.forEach((element) => fadeObserver.observe(element));
+document.querySelectorAll('.reveal, .reveal-children, .reveal-img')
+  .forEach(el => revealObserver.observe(el));
 
-const navLinks = document.querySelectorAll('.site-nav a, .cta-button, .hero-cta');
-navLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    if (link.hash && document.querySelector(link.hash)) {
-      event.preventDefault();
-      document.querySelector(link.hash).scrollIntoView({ behavior: 'smooth', block: 'start' });
+/* ── Scroll-reveal — staggered for specific grids ──────── */
+const staggerObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      staggerObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.06 });
+
+document.querySelectorAll('.process-steps, .services-grid')
+  .forEach(el => staggerObserver.observe(el));
+
+/* ── Smooth scroll for anchor links ──────────────────── */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
 
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.site-header');
-  if (window.scrollY > 30) {
-    header.style.background = 'rgba(17, 17, 16, 0.9)';
-  } else {
-    header.style.background = 'rgba(17, 17, 16, 0.25)';
-  }
-});
+/* ── Very subtle parallax on hero image ──────────────── */
+const heroImg = document.querySelector('.hero-img');
+if (heroImg && window.matchMedia('(min-width: 769px)').matches) {
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY < window.innerHeight * 1.2) {
+      heroImg.style.transform = `translateY(${scrollY * 0.12}px)`;
+    }
+  }, { passive: true });
+}

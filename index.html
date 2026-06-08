@@ -4,241 +4,342 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Legacy Brand Experience | Corporate Gifting Premium</title>
-  <meta name="description" content="Boutique de corporate gifting e brand experience que transforma relações corporativas em momentos memoráveis. Curadoria construída em torno de uma intenção." />
-  <meta name="keywords" content="corporate gifting premium, experiências corporativas, curadoria de marca, brand experience São Paulo" />
+  <meta name="description" content="Boutique de corporate gifting e brand experience. Transformamos presentes em experiências de conexão, cuidado e memória. São Paulo." />
+
+  <link rel="canonical" href="https://www.legacybx.com.br/" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.legacybx.com.br/" />
+  <meta property="og:title"       content="Legacy Brand Experience | Corporate Gifting Premium" />
+  <meta property="og:description" content="Transformamos presentes corporativos em momentos de conexão, cuidado e memória." />
+  <meta property="og:image"       content="https://www.legacybx.com.br/assets/imagens/hero-unboxing.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="Legacy Brand Experience" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Legacy Brand Experience | Corporate Gifting Premium" />
+  <meta name="twitter:description" content="Transformamos presentes corporativos em momentos de conexão, cuidado e memória." />
+  <meta name="twitter:image"       content="https://www.legacybx.com.br/assets/imagens/hero-unboxing.png" />
+
+  <link rel="icon"            type="image/png" href="assets/logos/logo-monogram-gold.png" />
+  <link rel="apple-touch-icon"                 href="assets/logos/logo-monogram-gold.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" type="image/webp" href="assets/imagens/optimized/brand-details.webp" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header" id="top">
-      <div class="header-inner">
-        <a class="brand-link" href="#top" aria-label="Legacy Brand Experience">
-          <img src="assets/logo-horiz-noir-1200x400.png" alt="Legacy Brand Experience" class="brand-logo" />
-        </a>
-        <nav class="site-nav" aria-label="Menu principal">
-          <a href="#hero">A Legacy</a>
-          <a href="#sensory">Sensorial</a>
-          <a href="#manifesto">Experiências</a>
-          <a href="#processo">Processo</a>
-          <a href="#contato">Contato</a>
-        </nav>
-        <a href="#contato" class="cta-button">Criar uma experiência</a>
+
+  <!-- Intro: monogram signature animation -->
+  <div class="page-intro" id="page-intro" aria-hidden="true">
+    <img src="assets/logos/logo-horizontal.png" alt="Legacy Brand Experience" class="intro-logo" />
+  </div>
+
+  <!-- Mobile nav overlay -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="#hero"      class="mobile-nav-link">Início</a>
+      <a href="#manifesto" class="mobile-nav-link">A Legacy</a>
+      <a href="#servicos"  class="mobile-nav-link">O que criamos</a>
+      <a href="#processo"  class="mobile-nav-link">Processo</a>
+      <a href="#contato"   class="mobile-nav-link">Contato</a>
+    </div>
+    <a href="https://wa.me/5511930222212?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Legacy%20Brand%20Experience%20e%20gostaria%20de%20criar%20uma%20experi%C3%AAncia%20personalizada." target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Criar uma experiência</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand-link" href="#hero" aria-label="Legacy Brand Experience — Início">
+        <img src="assets/logos/logo-horizontal.png" alt="Legacy Brand Experience" class="brand-logo" />
+      </a>
+      <nav class="site-nav" aria-label="Menu principal">
+        <a href="#manifesto">A Legacy</a>
+        <a href="#servicos">O que criamos</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="https://wa.me/5511930222212?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Legacy%20Brand%20Experience%20e%20gostaria%20de%20criar%20uma%20experi%C3%AAncia%20personalizada." target="_blank" rel="noopener noreferrer" class="cta-button">Criar uma experiência</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="hero-section" id="hero">
+      <div class="hero-text">
+        <span class="eyebrow">Corporate Gifting &amp; Brand Experience</span>
+        <h1>Experiências criadas<br>para permanecer.</h1>
+        <p class="hero-subtitle">Transformamos presentes corporativos em momentos de conexão, cuidado e memória.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5511930222212?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Legacy%20Brand%20Experience%20e%20gostaria%20de%20criar%20uma%20experi%C3%AAncia%20personalizada." target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Criar uma experiência
+          </a>
+        </div>
       </div>
-    </header>
+      <div class="hero-visual">
+        <img
+          src="assets/imagens/optimized/brand-details.webp"
+          alt="Legacy Brand Experience — identidade e acabamentos da marca"
+          class="hero-img"
+          width="1536"
+          height="1024"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </section>
 
-    <main>
-      <section class="hero-section" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-shell">
-          <div class="hero-grid">
-            <div class="hero-text">
-              <h1>O QUE FICA DEPOIS DA ENTREGA<br><br>ISSO É LEGACY.</h1>
-              <p>Boutique de corporate gifting e brand experience criada para fortalecer relações, percepção e sofisticação.</p>
-              <a href="#contato" class="hero-cta">CRIAR UMA EXPERIÊNCIA</a>
-            </div>
-            <div class="hero-media" aria-hidden="true">
-              <div class="media-frame">
-                <img src="assets/hero-legacy.jpg" alt="Unboxing Legacy - caixa premium com detalhes em ouro" class="hero-image" loading="lazy" />
-                <div class="monogram-ll" aria-hidden="true">LL</div>
-              </div>
-            </div>
+    <!-- 2. MANIFESTO -->
+    <section class="manifesto-section" id="manifesto">
+      <div class="manifesto-visual reveal-img">
+        <img src="assets/imagens/optimized/image-3-site.webp" alt="Detalhes de marca Legacy — curadoria e materiais nobres" class="manifesto-img" width="1536" height="1024" loading="lazy" />
+      </div>
+      <div class="manifesto-text reveal">
+        <span class="eyebrow">Manifesto</span>
+        <h2>Antes de um presente<br>existir, existe<br><em>uma intenção.</em></h2>
+        <p>Cada experiência Legacy nasce de um entendimento profundo. Escolhemos materiais com significado. Personalizamos o detalhe que vai ser lembrado.</p>
+        <p>Criamos embalagens que são, por si só, uma primeira impressão. Porque o presente que fica na memória não é o mais caro. É o mais pensado.</p>
+        <div class="manifesto-rule" aria-hidden="true"></div>
+        <span class="manifesto-signature">Legacy Brand Experience</span>
+      </div>
+    </section>
+
+    <!-- FUNDADORES -->
+    <section class="founders-section" id="fundadores">
+      <div class="founders-text reveal">
+        <span class="eyebrow">As pessoas por trás da experiência</span>
+        <p>A Legacy nasce da união de olhares complementares: sensibilidade para perceber o que torna um momento especial e cuidado para transformar ideias em experiências memoráveis.</p>
+        <p>Cada detalhe é pensado para carregar intenção, traduzir histórias e criar conexões verdadeiras entre marcas e pessoas.</p>
+        <p>Porque acreditamos que os melhores presentes não terminam quando são entregues. Eles permanecem.</p>
+        <div class="founders-signatures">
+          <div class="founder-item">
+            <span class="founder-name">Evelyn Preto Silva</span>
+            <span class="founder-role">Founder</span>
+            <a href="https://www.linkedin.com/in/evelyn-preto-silva-1072a4164/" target="_blank" rel="noopener noreferrer" class="founder-linkedin" aria-label="LinkedIn de Evelyn Preto Silva">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+          <div class="founder-item">
+            <span class="founder-name">Paulo Spadari Buti</span>
+            <span class="founder-role">Founder</span>
+            <a href="https://www.linkedin.com/in/paulobuti/" target="_blank" rel="noopener noreferrer" class="founder-linkedin" aria-label="LinkedIn de Paulo Spadari Buti">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+      <div class="founders-visual reveal-img">
+        <img
+          src="assets/imagens/optimized/fundadores.jpeg"
+          alt="Evelyn Preto Silva e Paulo Spadari Buti, founders da Legacy Brand Experience"
+          class="founders-img"
+          width="1200" height="1500"
+          loading="lazy"
+        />
+      </div>
+    </section>
 
-      <section class="sensory-hero-section" id="sensory">
-        <div class="sensory-hero-content">
-          <div class="sensory-text">
-            <p class="eyebrow">Sensorial</p>
-            <h2>A experiência começa antes de abrir.</h2>
-            <p class="sensory-description">Antes do primeiro contato, sua marca já comunica algo. A textura. O peso. O cuidado no detalhe. Tudo constrói percepção.</p>
+    <!-- 3. O QUE CRIAMOS -->
+    <section class="services-section" id="servicos">
+      <div class="services-header reveal">
+        <span class="eyebrow">O que criamos</span>
+        <h2>Experiências desenhadas<br>para cada momento.</h2>
+      </div>
+      <div class="services-grid reveal-children">
+
+        <article class="service-card">
+          <div class="service-visual">
+            <img src="assets/imagens/optimized/corporate-gifting.webp" alt="Presentes Corporativos Legacy — conexão com clientes e colaboradores" width="1200" height="800" loading="lazy" />
           </div>
-          <div class="sensory-hero-media">
-            <img src="assets/sensorial-ritual.jpg" alt="Mãos abrindo caixa Legacy - ritual e descoberta sensorial" class="sensory-hero-image" loading="lazy" />
+          <div class="service-content">
+            <h3>Presentes Corporativos</h3>
+            <p>Curadoria de presentes que fortalecem conexões com clientes, colaboradores e parceiros. Do conceito à entrega.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-visual">
+            <img src="assets/imagens/optimized/signature-experience.webp" alt="Experiências de Marca Legacy — percepção de valor e propósito" width="1200" height="800" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Experiências de Marca</h3>
+            <p>Cada detalhe traduz um propósito. Embalagem, acabamento e percepção de valor que elevam a presença da sua marca.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-visual">
+            <img src="assets/imagens/optimized/hero-unboxing.webp" alt="Momentos Memoráveis Legacy — celebrações e datas especiais" width="1200" height="800" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Momentos Memoráveis</h3>
+            <p>Datas especiais, conquistas e celebrações transformadas em lembranças que ficam. Com a sofisticação que cada momento merece.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-visual">
+            <img src="assets/imagens/optimized/bespoke-curation.webp" alt="Curadoria Personalizada Legacy — projetos exclusivos para cada ocasião" width="1200" height="800" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Curadoria Personalizada</h3>
+            <p>Projetos criados com atenção exclusiva a cada detalhe. Escolha cuidadosa para cada público, cada ocasião.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PARA QUEM CRIAMOS -->
+    <section class="audience-section" id="para-quem">
+      <div class="audience-inner">
+        <div class="audience-header reveal">
+          <span class="eyebrow">Para quem criamos</span>
+          <h2>Criamos experiências para empresas que entendem que grandes relações são construídas nos detalhes.</h2>
+        </div>
+        <div class="audience-grid reveal-children">
+          <div class="audience-card">
+            <span class="audience-num">01</span>
+            <h3>Receber clientes estratégicos</h3>
+            <p>Para transformar encontros importantes em momentos que fortalecem confiança, proximidade e conexão.</p>
+          </div>
+          <div class="audience-card">
+            <span class="audience-num">02</span>
+            <h3>Celebrar conquistas</h3>
+            <p>Para reconhecer marcos, resultados e histórias que merecem ser lembradas.</p>
+          </div>
+          <div class="audience-card">
+            <span class="audience-num">03</span>
+            <h3>Valorizar pessoas</h3>
+            <p>Para colaboradores, líderes e talentos que fazem parte da construção de uma marca.</p>
+          </div>
+          <div class="audience-card">
+            <span class="audience-num">04</span>
+            <h3>Marcar novos ciclos</h3>
+            <p>Para onboarding de executivos, chegada de novos líderes, transições e momentos especiais de transformação.</p>
+          </div>
+          <div class="audience-card">
+            <span class="audience-num">05</span>
+            <h3>Fortalecer relações</h3>
+            <p>Para clientes, parceiros e pessoas essenciais que fazem parte da jornada da empresa.</p>
           </div>
         </div>
-      </section>
+        <div class="audience-tagline reveal">
+          <div class="audience-rule" aria-hidden="true"></div>
+          <p>Mais do que presentes. Gestos que comunicam cuidado, reconhecimento e intenção.</p>
+        </div>
+      </div>
+    </section>
 
-      <section class="curation-section">
-        <div class="section-shell">
-          <div class="curation-layout">
-            <div class="curation-text">
-              <p class="eyebrow">Curadoria</p>
-              <h2>Curadoria com intenção.</h2>
-              <p>Cada elemento existe por uma razão. Cada detalhe representa uma mensagem.</p>
-            </div>
-            <div class="curation-media">
-              <img src="assets/sensorial-curadoria.jpg" alt="Curaçao de objetos premium - each element with intention" class="curation-image" loading="lazy" />
-            </div>
+    <!-- 4. PROCESSO -->
+    <section class="process-section" id="processo">
+      <div class="process-inner">
+        <div class="process-header reveal">
+          <span class="eyebrow">Como trabalhamos</span>
+          <h2>A jornada de cada experiência.</h2>
+        </div>
+        <div class="process-steps reveal-children">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <h3>Escutamos</h3>
+            <p>Entendemos a marca, o momento e a pessoa que vai receber.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <h3>Curamos</h3>
+            <p>Selecionamos cada elemento com intenção, propósito e identidade.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <h3>Personalizamos</h3>
+            <p>Acabamentos, embalagem e detalhes que transformam o objeto em memória.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <h3>Entregamos</h3>
+            <p>Uma experiência completa, da abertura à última impressão.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="detail-section">
-        <div class="section-shell">
-          <div class="detail-layout">
-            <div class="detail-media">
-              <img src="assets/detalhe-hotstamping.jpg" alt="Detalhe premium - hot stamping personalizado em ouro" class="detail-image" loading="lazy" />
-            </div>
-            <div class="detail-text">
-              <p class="eyebrow">Detalhe</p>
-              <h2>O detalhe que permanece.</h2>
-              <p>Personalização não é colocar uma marca. É transformar um objeto em memória.</p>
-            </div>
+    <!-- 5. GALERIA EDITORIAL -->
+    <section class="gallery-section" aria-label="Galeria editorial Legacy">
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-img">
+          <img src="assets/imagens/optimized/image-6-site.webp" alt="Legacy Brand Experience — detalhes e acabamentos premium" width="1536" height="1024" loading="lazy" />
+        </div>
+        <div class="gallery-item reveal-img">
+          <img src="assets/imagens/optimized/image-4-site.webp" alt="Legacy — curadoria e personalização" width="1536" height="1024" loading="lazy" />
+        </div>
+        <div class="gallery-item gallery-item--caption reveal">
+          <div class="gallery-caption">
+            <span class="eyebrow">Percepção</span>
+            <p>"O detalhe certo não é percebido.<br>É <em>sentido.</em>"</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="manifesto-section" id="manifesto">
-        <div class="section-shell">
-          <div class="section-headline">
-            <p class="eyebrow">Manifesto</p>
-            <h2>Presentes são esquecidos. Experiências permanecem.</h2>
-            <div class="divider"></div>
-            <div class="gold-line" aria-hidden="true"></div>
-          </div>
-          <div class="manifesto-copy">
-            <p>Em um mundo onde marcas disputam atenção, os detalhes criam memória.</p>
-            <p>A Legacy transforma relações corporativas em experiências cuidadosamente desenhadas — da intenção à última impressão deixada pela embalagem.</p>
-          </div>
+    <!-- 6. CTA FINAL -->
+    <section class="cta-section" id="contato">
+      <div class="cta-inner reveal">
+        <span class="eyebrow eyebrow--light">Vamos começar</span>
+        <h2>Vamos criar uma experiência memorável?</h2>
+        <p>Cada detalhe conta. Vamos construir juntos.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5511930222212?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Legacy%20Brand%20Experience%20e%20gostaria%20de%20criar%20uma%20experi%C3%AAncia%20personalizada." target="_blank" rel="noopener noreferrer" class="btn-primary btn-primary--light">
+            Criar uma experiência
+          </a>
+          <a href="mailto:contato@legacybx.com.br" class="btn-ghost--light">contato@legacybx.com.br</a>
         </div>
-      </section>
+        <span class="cta-phone">+55 11 93022-2212</span>
+      </div>
+    </section>
 
-      <section class="offerings-section">
-        <div class="section-shell">
-          <div class="section-headline">
-            <p class="eyebrow">O que criamos</p>
-            <h2>Experiências criadas com intenção.</h2>
-            <div class="gold-line" aria-hidden="true"></div>
-          </div>
-          <div class="offerings-grid">
-            <article class="offering-card">
-              <span class="number">01</span>
-              <h3>Onboarding Experience</h3>
-              <p>Receba novos talentos transmitindo cultura antes mesmo do primeiro dia.</p>
-            </article>
-            <article class="offering-card">
-              <span class="number">02</span>
-              <h3>Client Experience</h3>
-              <p>Relacionamentos estratégicos merecem mais que lembranças. Merecem significado.</p>
-            </article>
-            <article class="offering-card">
-              <span class="number">03</span>
-              <h3>Executive Gifts</h3>
-              <p>Experiências criadas para fortalecer relações e afirmar percepção de marca.</p>
-            </article>
-            <article class="offering-card">
-              <span class="number">04</span>
-              <h3>Special Moments</h3>
-              <p>Datas, conquistas e marcos transformados em memória.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+  </main>
 
-      <section class="process-section" id="processo">
-        <div class="section-shell">
-          <div class="section-headline">
-            <p class="eyebrow">Processo</p>
-            <h2>Não começa pelo produto. Começa pela percepção.</h2>
-          </div>
-          <div class="timeline-grid">
-            <div class="step-card">
-              <span class="ordinal">01</span>
-              <p>Entendimento da marca</p>
-            </div>
-            <div class="step-card">
-              <span class="ordinal">02</span>
-              <p>Curadoria dos elementos</p>
-            </div>
-            <div class="step-card">
-              <span class="ordinal">03</span>
-              <p>Personalização premium</p>
-            </div>
-            <div class="step-card">
-              <span class="ordinal">04</span>
-              <p>Embalagem & experiência</p>
-            </div>
-            <div class="step-card">
-              <span class="ordinal">05</span>
-              <p>Entrega memorável</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="concept-section">
-        <div class="section-shell split-shell">
-          <div class="content-block">
-            <p class="eyebrow">Repertório</p>
-            <h2>Não temos uma prateleira. Temos repertório.</h2>
-            <p>Cada composição nasce do objetivo da marca, do perfil de quem recebe e da mensagem que precisa permanecer.</p>
-          </div>
-          <div class="visual-list">
-            <div class="visual-item"><span>Caixa rígida premium</span></div>
-            <div class="visual-item"><span>Hot stamping</span></div>
-            <div class="visual-item"><span>Papelaria personalizada</span></div>
-            <div class="visual-item"><span>Produtos de curadoria</span></div>
-            <div class="visual-item"><span>Carta manuscrita</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="impact-section">
-        <div class="impact-shell">
-          <p class="impact-copy">Percepção se constrói em detalhes.</p>
-          <span class="impact-subtitle">Legacy Brand Experience</span>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contato">
-        <div class="section-shell contact-shell">
-          <div class="contact-copy">
-            <p class="eyebrow">Contato</p>
-            <h2>Vamos criar algo que continue sendo lembrado.</h2>
-            <p>Fale conosco para desenhar uma experiência de marca que vive além da entrega.</p>
-          </div>
-          <form class="contact-form" action="mailto:legacybrandexperience@gmail.com" method="post" enctype="text/plain">
-            <label>
-              Nome
-              <input type="text" name="nome" placeholder="Seu nome" required />
-            </label>
-            <label>
-              Empresa
-              <input type="text" name="empresa" placeholder="Nome da empresa" required />
-            </label>
-            <label>
-              E-mail
-              <input type="email" name="email" placeholder="seu@email.com" required />
-            </label>
-            <label>
-              Objetivo da experiência
-              <textarea name="objetivo" rows="4" placeholder="Descreva o momento ou objetivo" required></textarea>
-            </label>
-            <div class="form-actions">
-              <button type="submit">INICIAR CONVERSA</button>
-              <a href="https://wa.me/5511980867468" class="whatsapp-link" target="_blank" rel="noreferrer">WhatsApp</a>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <p>Legacy Brand Experience</p>
-        <p>Corporate Gifting & Brand Experience</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logos/logo-noir.png" alt="Legacy Brand Experience" class="footer-logo" />
+        <p>Corporate Gifting &amp; Brand Experience</p>
         <p>São Paulo — Brasil</p>
       </div>
-      <div class="footer-links">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#manifesto">A Legacy</a>
+        <a href="#servicos">O que criamos</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="https://wa.me/5511930222212?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Legacy%20Brand%20Experience%20e%20gostaria%20de%20criar%20uma%20experi%C3%AAncia%20personalizada." target="_blank" rel="noopener noreferrer">+55 11 93022-2212</a>
+        <a href="mailto:contato@legacybx.com.br">contato@legacybx.com.br</a>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/legacy.bx?igsh=a3U4MnVyaWtnczlq" target="_blank" rel="noopener noreferrer" aria-label="Instagram Legacy Brand Experience">Instagram</a>
+          <a href="https://www.linkedin.com/company/legacy-brand-experience/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Legacy Brand Experience">LinkedIn</a>
+        </div>
       </div>
-    </footer>
-  </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Legacy Brand Experience</p>
+      <img src="assets/logos/logo-monogram-gold.png" alt="" class="footer-monogram" aria-hidden="true" />
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
