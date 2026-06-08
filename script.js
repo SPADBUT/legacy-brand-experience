@@ -90,6 +90,18 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+/* ── WhatsApp conversion tracking ────────────────────── */
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'whatsapp_click', {
+        event_category: 'lead',
+        event_label: 'whatsapp'
+      });
+    }
+  });
+});
+
 /* ── Very subtle parallax on hero image ──────────────── */
 const heroImg = document.querySelector('.hero-img');
 if (heroImg && window.matchMedia('(min-width: 769px)').matches) {
